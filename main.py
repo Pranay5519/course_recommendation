@@ -4,9 +4,9 @@ import streamlit as st
 import numpy as np
 
 image = 'https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera.s3.amazonaws.com/media/coursera-rebrand-logo-square.png'
-df = pd.read_csv(r'C:\Users\HP\Desktop\datasets\coursera\data_no_dupli_index_reset.csv')
+df = pd.read_csv('data_no_dupli_index_reset.csv')
 del df['Unnamed: 0']
-cosine = pickle.load(open(r'C:\Users\HP\Desktop\datasets\coursera\cosine_similarity.pkl','rb'))
+cosine = pickle.load(open('cosine_similarity.pkl','rb'))
 
 recommended_list = []
 def recommend(title):
